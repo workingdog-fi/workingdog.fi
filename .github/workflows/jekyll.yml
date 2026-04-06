@@ -33,6 +33,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Checkout judging source
+        uses: actions/checkout@v4
+        with:
+          repository: vadika/k9-SAR-judging
+          path: .external/k9-SAR-judging
       - name: Setup Ruby
         # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
@@ -43,6 +48,8 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+      - name: Import judging content
+        run: ruby scripts/import_judging_content.rb .external/k9-SAR-judging
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"

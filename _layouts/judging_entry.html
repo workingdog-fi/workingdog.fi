@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="container">
+    <article class="section full-width judging-entry">
+        <div class="judging-breadcrumb">
+            <a href="{{ '/judging/' | relative_url }}">IRO SAR Test</a>
+            <span>/</span>
+            <span>{{ page.title }}</span>
+        </div>
+
+        <header class="judging-entry-header">
+            {% if page.judging_group_label %}
+            <p class="judging-label">{{ page.judging_group_label }}</p>
+            {% endif %}
+            <h1>{{ page.title }}</h1>
+        </header>
+
+        <div class="judging-content">
+            {{ content }}
+        </div>
+
+        {% if page.source_url %}
+        <p class="judging-source">
+            Source:
+            <a href="{{ page.source_url }}">{{ page.source_path }}</a>
+        </p>
+        {% endif %}
+    </article>
+</div>

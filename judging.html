@@ -1,0 +1,99 @@
+---
+layout: default
+title: "IRO SAR Test"
+description: "Reference library for IRO SAR test notes, scoring logic, and exercise-by-exercise guidance."
+permalink: /judging/
+---
+
+<div class="container">
+    {% assign judging_pages = site.judging %}
+    {% if judging_pages %}
+    {% assign judging_pages = judging_pages | sort: "judging_order" %}
+    {% else %}
+    {% assign judging_pages = "" | split: "" %}
+    {% endif %}
+    {% assign overview = judging_pages | where: "judging_group", "overview" | first %}
+    {% assign judge_view = judging_pages | where: "judging_group", "judge" %}
+    {% assign obedience = judging_pages | where: "judging_group", "obedience" %}
+    {% assign nosework = judging_pages | where: "judging_group", "nosework" %}
+
+    <section class="section full-width judging-overview">
+        <p class="judging-label">Reference Library</p>
+        <h1>IRO SAR Test</h1>
+        <p class="judging-intro">
+            A structured breakdown and review of the exercises to help dog handlers and other test participants understand the IRO SAR test structure, mechanics, and judging view.
+        </p>
+    </section>
+
+    {% if judging_pages.size > 0 %}
+    <div class="judging-sections">
+        <section class="section full-width">
+            <h2>Judge View</h2>
+            <div class="judging-list">
+                {% for item in judge_view %}
+                <a href="{{ item.url | relative_url }}" class="judging-list-item">
+                    <span class="judging-item-main">
+                        <span class="judging-ref">{{ item.judging_ref }}</span>
+                        <span class="judging-list-title">{{ item.title }}</span>
+                    </span>
+                    {% if item.judging_subtopics and item.judging_subtopics.size > 0 %}
+                    <span class="judging-item-preview">
+                        {% for subtopic in item.judging_subtopics %}
+                        <span class="judging-subtopic">{{ subtopic }}</span>
+                        {% endfor %}
+                    </span>
+                    {% endif %}
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="section full-width">
+            <h2>Obedience & Dexterity</h2>
+            <div class="judging-list">
+                {% for item in obedience %}
+                <a href="{{ item.url | relative_url }}" class="judging-list-item">
+                    <span class="judging-item-main">
+                        <span class="judging-ref">{{ item.judging_ref }}</span>
+                        <span class="judging-list-title">{{ item.title }}</span>
+                    </span>
+                    {% if item.judging_subtopics and item.judging_subtopics.size > 0 %}
+                    <span class="judging-item-preview">
+                        {% for subtopic in item.judging_subtopics %}
+                        <span class="judging-subtopic">{{ subtopic }}</span>
+                        {% endfor %}
+                    </span>
+                    {% endif %}
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section class="section full-width">
+            <h2>Nosework & Alerts</h2>
+            <div class="judging-list">
+                {% for item in nosework %}
+                <a href="{{ item.url | relative_url }}" class="judging-list-item">
+                    <span class="judging-item-main">
+                        <span class="judging-ref">{{ item.judging_ref }}</span>
+                        <span class="judging-list-title">{{ item.title }}</span>
+                    </span>
+                    {% if item.judging_subtopics and item.judging_subtopics.size > 0 %}
+                    <span class="judging-item-preview">
+                        {% for subtopic in item.judging_subtopics %}
+                        <span class="judging-subtopic">{{ subtopic }}</span>
+                        {% endfor %}
+                    </span>
+                    {% endif %}
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+    </div>
+    {% else %}
+    <section class="section full-width">
+        <h2>Content Not Imported Yet</h2>
+        <p>Run the judging import step before building locally, or let GitHub Actions fetch the external repository during deployment.</p>
+    </section>
+    {% endif %}
+</div>

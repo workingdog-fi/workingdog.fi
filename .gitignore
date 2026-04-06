@@ -1,2 +1,6 @@
 .DS_Store
 *Zone.Identifier
+_judging/
+.external/
+_site/
+.jekyll-cache/

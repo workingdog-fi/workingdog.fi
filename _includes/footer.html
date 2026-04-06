@@ -1,0 +1,10 @@
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-contact">
+            <a href="mailto:{{ site.author.email }}" class="footer-link">E-mail: {{ site.author.email }}</a>
+            <a href="tel:{{ site.author.phone | replace: ' ', '' }}" class="footer-link">Phone: {{ site.author.phone }}</a>
+            <span class="footer-text">Location: {{ site.author.location }}</span>
+        </div>
+        <p class="footer-copy">Copyright © {{ site.time | date: "%Y" }} {{ site.author.name }}</p>
+    </div>
+</footer>

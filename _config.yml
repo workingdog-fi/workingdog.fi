@@ -34,6 +34,9 @@ collections:
     output: false
   certifications:
     output: false
+  judging:
+    output: true
+    permalink: /judging/:name/
 
 # Exclude from processing
 exclude:
