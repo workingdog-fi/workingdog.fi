@@ -3,7 +3,7 @@
 title: "Vadim Likholetov - SAR Officer & Dog Handler"
 description: "Professional SAR Officer with 15+ years experience in Search and Rescue operations and dog handling"
 baseurl: ""
-url: "https://vadika.github.io"
+url: "https://workingdog.fi"
 
 # Build settings
 markdown: kramdown
@@ -44,4 +44,3 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-

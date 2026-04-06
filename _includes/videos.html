@@ -2,7 +2,7 @@
     <h2>Operational Videos</h2>
     <div class="video-links">
         {% for video in site.data.videos %}
-        <a href="{{ video.url }}" target="_blank" class="video-link">
+        <a href="{{ video.url }}" target="_blank" rel="noopener noreferrer" class="video-link">
             {% if video.preview %}
             <div class="video-preview">
                 <img src="{{ video.preview }}" alt="{{ video.title }}">
@@ -17,4 +17,3 @@
         {% endfor %}
     </div>
 </section>
-
