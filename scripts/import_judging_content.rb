@@ -31,6 +31,7 @@ end
 
 def group_info(relative_path)
   return ["overview", "Overview", 0, "KP"] if relative_path == "JUDGE_KEY_POINTS.md"
+  return ["judge", "Judge View", 8, "J08"] if relative_path == "judge/ABBREVIATIONS.md"
 
   base = File.basename(relative_path, ".md")
   number = base[/^\d+/].to_i
