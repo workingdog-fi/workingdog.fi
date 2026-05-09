@@ -2,15 +2,17 @@
     <div class="webinar-header">
         <h1>{{ include.webinar_data.title }}</h1>
         <p class="lead">{{ include.webinar_data.description }}</p>
+        {% if include.webinar_data.registration_url %}
         <p class="registration-prompt">{{ include.webinar_data.registration_prompt }}</p>
         <div class="registration-button">
-            <a href="{{ include.webinar_data.registration_url }}" 
-               class="button" 
-               target="_blank" 
+            <a href="{{ include.webinar_data.registration_url }}"
+               class="button"
+               target="_blank"
                rel="noopener noreferrer">
                 {{ include.webinar_data.registration_text }}
             </a>
         </div>
+        {% endif %}
     </div>
     
     <h2 class="webinars-title">{{ include.available_webinars_text | default: "Available Webinars" }}</h2>
@@ -30,7 +32,7 @@
             </ul>
             <p class="webinar-meta"><strong>{{ include.duration_text | default: "Duration" }}:</strong> {{ webinar.duration }} | <strong>{{ include.level_text | default: "Level" }}:</strong> {{ webinar.level }}</p>
             {% if webinar.url %}
-            <p class="webinar-cta"><a href="{{ webinar.url }}" class="button">{{ webinar.cta_text | default: "Learn more" }}</a></p>
+            <p class="webinar-cta"><a href="{{ webinar.url }}" class="button"{% if webinar.url contains '://' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ webinar.cta_text | default: "Learn more" }}</a></p>
             {% endif %}
         </div>
         {% endfor %}

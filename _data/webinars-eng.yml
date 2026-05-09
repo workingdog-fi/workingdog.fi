@@ -1,8 +1,5 @@
 title: "SAR Dog Training Webinars"
-description: "Enhance your SAR dog training skills with our specialized webinars designed for handlers at all levels."
-registration_url: "https://docs.google.com/forms/d/e/1FAIpQLScLHrYHinsfAszmY1SFmEUNj369RQPab3jOtGueakcQEk2k7w/viewform"
-registration_text: "Register Now"
-registration_prompt: "Ready to enhance your SAR dog training skills? Register now to secure your spot in our upcoming webinars."
+description: "Enhance your SAR dog training skills with our specialized webinars designed for handlers at all levels. Each webinar below has its own application or registration flow — pick the one you want."
 
 webinars:
   - title: "Inside the Indication — Saturday 30 May 2026"
@@ -30,6 +27,8 @@ webinars:
       - "Case studies from real SAR operations"
     duration: "2 hours"
     level: "Intermediate to Advanced"
+    url: "https://docs.google.com/forms/d/e/1FAIpQLScLHrYHinsfAszmY1SFmEUNj369RQPab3jOtGueakcQEk2k7w/viewform"
+    cta_text: "Express interest"
 
   - title: "Reward Schedules: Optimizing Training Effectiveness"
     image: "/assets/images/webinars/reward-schedules.jpg"
@@ -42,6 +41,8 @@ webinars:
       - "Adapting schedules for different training phases"
     duration: "2.5 hours"
     level: "All levels"
+    url: "https://docs.google.com/forms/d/e/1FAIpQLScLHrYHinsfAszmY1SFmEUNj369RQPab3jOtGueakcQEk2k7w/viewform"
+    cta_text: "Express interest"
 
   - title: "Mastering Barking Indication"
     image: "/assets/images/webinars/barking-indication.jpg"
@@ -54,3 +55,5 @@ webinars:
       - "Integration with search patterns and victim location"
     duration: "3 hours"
     level: "Beginner to Intermediate"
+    url: "https://docs.google.com/forms/d/e/1FAIpQLScLHrYHinsfAszmY1SFmEUNj369RQPab3jOtGueakcQEk2k7w/viewform"
+    cta_text: "Express interest"
