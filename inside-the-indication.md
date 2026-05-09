@@ -133,7 +133,7 @@ Recall, stay, and heeling matter for SAR work and for the wrap-up out of the fin
   </tr>
   <tr>
     <th>Refund</th>
-    <td>100% refund anytime up to 7 days after the live session, no questions asked.</td>
+    <td>All sales final. Recording included free, so missing the live session still delivers the content.</td>
   </tr>
 </table>
 
@@ -201,7 +201,7 @@ Your application data — name, email, dog and training context, country — is 
 
 ### If we have to cancel
 
-If the event is cancelled or rescheduled for any reason, paid attendees are offered either a full refund or a free seat at the rescheduled date. Recording delivery commitment carries to the new date.
+If the event is rescheduled for any reason, paid attendees keep their seat at the new date. Recording delivery commitment carries to the new date. If the event is cancelled outright (no reschedule possible), the recording of an equivalent session — live or pre-recorded — is delivered instead.
 
 </section>
 
