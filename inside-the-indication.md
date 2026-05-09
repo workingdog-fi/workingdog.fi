@@ -86,9 +86,9 @@ Recall, stay, and heeling matter for SAR work and for the wrap-up out of the fin
 </section>
 
 <!-- Who -->
-<section class="section who-section">
-  <div class="who-grid">
-    <div class="who-block" markdown="1">
+<section class="section who-section" markdown="1">
+<div class="who-grid" markdown="1">
+<div class="who-block" markdown="1">
 
 ### Who this is for
 
@@ -96,16 +96,16 @@ Recall, stay, and heeling matter for SAR work and for the wrap-up out of the fin
 - Instructors and helpers who train other people's dogs
 - Sport SAR (IPO-R / IRO) competitors preparing for tests
 
-    </div>
-    <div class="who-block" markdown="1">
+</div>
+<div class="who-block" markdown="1">
 
 ### Who this is *not* for
 
 - Pet-dog owners with no SAR or sport context
 - Total beginners — you should already have a dog working scent in some form
 
-    </div>
-  </div>
+</div>
+</div>
 </section>
 
 <!-- Format + price -->
