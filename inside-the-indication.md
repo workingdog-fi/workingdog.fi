@@ -117,7 +117,7 @@ Recall, stay, and heeling matter for SAR work and for the wrap-up out of the fin
 <table class="format-table">
   <tr>
     <th>Format</th>
-    <td>Live Zoom Webinar, 90 minutes, English</td>
+    <td>Live webinar on workingdog.fi · 90 minutes · English</td>
   </tr>
   <tr>
     <th>Date</th>
@@ -148,7 +148,7 @@ Recall, stay, and heeling matter for SAR work and for the wrap-up out of the fin
 1. **Fill the questionnaire.** Apply via the form below.
 2. **Vadim reviews your application within 3 working days.**
 3. **If approved, you receive an invitation email with a payment link.** Stripe, secure.
-4. **Pay — your seat is confirmed.** Zoom link follows.
+4. **Pay — your seat is confirmed.** Webinar link follows.
 5. **Join live on 30 May, or watch the recording in the week after.**
 {:.how-list}
 
