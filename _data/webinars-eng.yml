@@ -5,6 +5,20 @@ registration_text: "Register Now"
 registration_prompt: "Ready to enhance your SAR dog training skills? Register now to secure your spot in our upcoming webinars."
 
 webinars:
+  - title: "Inside the Indication — Saturday 30 May 2026"
+    image: "/assets/images/webinars/inside-the-indication.jpg"
+    description: "Paid 90-min flagship webinar on the 9 skills underneath a reliable indication. Apply-first."
+    topics:
+      - "Why indication problems are usually structural, not motivational"
+      - "The 9 skills the indication chain rests on (recall/stay/heel are general handling, not in this diagnostic)"
+      - "Two-stage diagnosis: decompose the chain, then apply don't-know / no-motivation / not-healthy to the broken link"
+      - "The trap of correction without structure — how it trains the mistake into the chain"
+      - "How to use the framework on your own dog the next training day"
+    duration: "90 minutes"
+    level: "Working handlers + instructors"
+    url: "/9skills-webinar/"
+    cta_text: "Apply for a seat"
+
   - title: "False Indications: Understanding and Prevention"
     image: "/assets/images/webinars/false-indications.jpg"
     description: "Learn to identify, understand, and prevent false indications in SAR dogs. This comprehensive webinar covers:"

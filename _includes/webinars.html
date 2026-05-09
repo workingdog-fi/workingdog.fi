@@ -29,6 +29,9 @@
                 {% endfor %}
             </ul>
             <p class="webinar-meta"><strong>{{ include.duration_text | default: "Duration" }}:</strong> {{ webinar.duration }} | <strong>{{ include.level_text | default: "Level" }}:</strong> {{ webinar.level }}</p>
+            {% if webinar.url %}
+            <p class="webinar-cta"><a href="{{ webinar.url }}" class="button">{{ webinar.cta_text | default: "Learn more" }}</a></p>
+            {% endif %}
         </div>
         {% endfor %}
     </div>

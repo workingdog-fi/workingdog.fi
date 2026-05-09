@@ -4,7 +4,7 @@ title: "Inside the Indication — Webinar | WorkingDog.fi"
 description: "A 90-minute paid webinar with Vadim Likholetov: the 9 skills underneath a reliable indication, why most indication problems are structural, and how to diagnose them on your own dog. Saturday 30 May 2026, 11:00 EEST."
 lang: en
 region: GB
-permalink: /webinar/
+permalink: /9skills-webinar/
 og_title: "Inside the Indication — 9 skills underneath a reliable indication"
 og_description: "Paid 90-min webinar with Vadim Likholetov on Saturday 30 May 2026 at 11:00 EEST. Apply-first. €19 early-bird / €25. Recording included."
 og_type: "event"
