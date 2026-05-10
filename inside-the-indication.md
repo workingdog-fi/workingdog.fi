@@ -6,7 +6,7 @@ lang: en
 region: GB
 permalink: /9skills-webinar/
 og_title: "Inside the Indication — 9 skills underneath a reliable indication"
-og_description: "Paid 90-min webinar with Vadim Likholetov on Saturday 30 May 2026 at 11:00 EEST. Apply-first. €19 early-bird / €25. Recording included."
+og_description: "Paid 90-min webinar with Vadim Likholetov on Saturday 30 May 2026 at 11:00 EEST. Apply-first. €25. Recording included."
 og_type: "event"
 # og_image: "/assets/images/webinar-og-card.jpg"  # uncomment + add file once the 1200x630 anchor slide is exported
 ---
@@ -30,7 +30,7 @@ og_type: "event"
         Apply for a seat
       </a>
     </div>
-    <p class="hero-fineprint">Curated event, apply-first. Approved applicants receive an invitation to register at <strong>€19 early-bird</strong> (applications received in the first 14 days, through 16 May) or <strong>€25</strong> standard. Hosted by Vadim Likholetov — see the <a href="{{ '/' | relative_url }}">home page</a> for background, dogs, and deployment history.</p>
+    <p class="hero-fineprint">Curated event, apply-first. Approved applicants receive an invitation to register at <strong>€25</strong>. Hosted by Vadim Likholetov — see the <a href="{{ '/' | relative_url }}">home page</a> for background, dogs, and deployment history.</p>
   </div>
 </section>
 
@@ -129,7 +129,7 @@ Recall, stay, and heeling matter for SAR work and for the wrap-up out of the fin
   </tr>
   <tr>
     <th>Price</th>
-    <td><strong>€19 early-bird</strong> for applications received in the first 14 days (through 16 May) · <strong>€25</strong> thereafter. The price is locked at the date you apply — not when you're approved.</td>
+    <td><strong>€25</strong> flat. Same price for everyone, no early-bird, no discount codes.</td>
   </tr>
   <tr>
     <th>Refund</th>
