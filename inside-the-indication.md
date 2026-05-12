@@ -30,7 +30,7 @@ og_type: "event"
         Apply for a seat
       </a>
     </div>
-    <p class="hero-fineprint">Curated event, apply-first. Approved applicants receive an invitation to register at <strong>€25</strong>. Hosted by Vadim Likholetov — see the <a href="{{ '/' | relative_url }}">home page</a> for background, dogs, and deployment history.</p>
+    <p class="hero-fineprint">Curated event, apply-first. Approved applicants receive an invitation to register. Hosted by Vadim Likholetov — see the <a href="{{ '/' | relative_url }}">home page</a> for background, dogs, and deployment history.</p>
   </div>
 </section>
 
@@ -81,7 +81,7 @@ Recall, stay, and heeling matter for SAR work and for the wrap-up out of the fin
 - Why the helper is the most underestimated lever in SAR training — and how reward geometry shapes alert distance.
 - The nine skills underneath an indication, named and mapped to the chain — what each one looks like when missing. (Recall, stay, heel are general handling — not in this diagnostic.)
 - A two-stage diagnosis: first decompose the chain to find the broken link (the work most handlers skip), *then* apply *don't know / no motivation / not healthy* to that specific link to pick the response. Walked through on live examples from registrants.
-- Before the chain: what changed in the *picture* the dog is reading. Airflow, contamination, area saturation, hide accessibility, your own line tension and body language, reinforcement history for this problem class. If the picture changed, the dog isn't broken — the question is. Frame credited to Alexandra Butler.
+- Before the chain: what changed in the *picture* the dog is reading. Airflow, contamination, area saturation, hide accessibility, your own line tension and body language, reinforcement history for this problem class. If the picture changed, the dog isn't broken — the question is.
 {:.value-list}
 
 </section>
