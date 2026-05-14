@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title | default: site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+
+{% comment %} Open Graph + Twitter Card — auto-generated from page frontmatter when present {% endcomment %}
+<meta property="og:title" content="{{ page.og_title | default: page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.og_description | default: page.description | default: site.description }}">
+<meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+{% if page.og_image %}<meta property="og:image" content="{{ page.og_image | absolute_url }}">{% endif %}
+<meta property="og:locale" content="{{ page.lang | default: 'en' }}_{{ page.region | default: 'US' }}">
+<meta property="og:site_name" content="WorkingDog.fi">
+<meta name="twitter:card" content="{% if page.og_image %}summary_large_image{% else %}summary{% endif %}">
+<meta name="twitter:title" content="{{ page.og_title | default: page.title | default: site.title }}">
+<meta name="twitter:description" content="{{ page.og_description | default: page.description | default: site.description }}">
+{% if page.og_image %}<meta name="twitter:image" content="{{ page.og_image | absolute_url }}">{% endif %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #efeae1;
+    --paper: #fbf8f2;
+    --paper-2: #f6f1e7;
+    --ink: #1c1a17;
+    --ink-2: #2c2926;
+    --muted: #6b655c;
+    --rule: #d9d2c4;
+    --rule-soft: #e6dfd0;
+    --accent: #c2562a;
+    --accent-soft: #d97a4a;
+    --serif: "Source Serif 4", "Iowan Old Style", "Georgia", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+  a:hover { text-decoration-color: var(--accent); color: var(--accent); }
+
+  /* Layout */
+  .page { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  .page-wide { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  header.site {
+    border-bottom: 1px solid var(--rule);
+    background: var(--bg);
+  }
+  header.site .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 0;
+  }
+  .brand {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+  }
+  nav.top {
+    display: flex;
+    gap: 28px;
+    font-size: 15px;
+    color: var(--ink-2);
+  }
+  nav.top a { text-decoration: none; }
+  nav.top a:hover { color: var(--accent); }
+
+  /* Card section wrapper */
+  .card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    margin: 18px 0;
+    padding: 56px 64px;
+  }
+  .card.tight { padding: 44px 64px; }
+  .card.hero {
+    background: linear-gradient(180deg, #fbf6ec 0%, #f6efe1 100%);
+    padding: 72px 64px 64px;
+    text-align: center;
+  }
+
+  /* Hero */
+  h1.hero {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    margin: 0 0 18px;
+  }
+  .hero-sub {
+    font-family: var(--serif);
+    font-size: 19px;
+    color: var(--ink-2);
+    margin: 0 0 22px;
+    font-style: italic;
+  }
+  .hero-meta {
+    font-size: 15px;
+    color: var(--ink-2);
+    line-height: 1.7;
+    margin-bottom: 28px;
+  }
+  .hero-meta .dot::before { content: " · "; color: var(--muted); }
+  .btn {
+    display: inline-block;
+    background: var(--ink);
+    color: #fbf8f2;
+    border: none;
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 28px;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: background 0.15s ease;
+  }
+  .btn:hover { background: var(--accent); color: #fff; }
+  .hero-fine {
+    margin-top: 28px;
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.65;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Section heading */
+  h2 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+  .rule {
+    width: 44px;
+    height: 2px;
+    background: var(--accent);
+    margin: 0 0 28px;
+    border: none;
+  }
+
+  /* Prose */
+  .prose p {
+    margin: 0 0 16px;
+    color: var(--ink-2);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  blockquote.pull {
+    margin: 22px 0;
+    padding: 6px 0 6px 20px;
+    border-left: 3px solid var(--accent);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+
+  /* Numbered list */
+  ol.chain {
+    list-style: none;
+    counter-reset: step;
+    margin: 0;
+    padding: 0;
+  }
+  ol.chain li {
+    counter-increment: step;
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    align-items: baseline;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    font-size: 16px;
+    color: var(--ink-2);
+  }
+  ol.chain li:last-child { border-bottom: none; }
+  ol.chain li::before {
+    content: counter(step);
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  /* Bullet lists */
+  ul.bullets {
+    margin: 0;
+    padding-left: 22px;
+    color: var(--ink-2);
+  }
+  ul.bullets li {
+    margin-bottom: 14px;
+    line-height: 1.7;
+    padding-left: 6px;
+  }
+  ul.bullets li::marker { color: var(--accent); }
+  ul.bullets em { font-style: italic; }
+
+  /* Two-column for/not-for */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+  }
+  .two-col h3 {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 14px;
+  }
+  .two-col h3 em { font-style: italic; font-weight: 700; }
+
+  /* Definition table */
+  dl.defs {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    row-gap: 18px;
+    column-gap: 32px;
+  }
+  dl.defs dt {
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 15px;
+  }
+  dl.defs dd {
+    margin: 0;
+    color: var(--ink-2);
+    font-size: 15.5px;
+    line-height: 1.6;
+  }
+  dl.defs .row {
+    display: contents;
+  }
+  dl.defs .row + .row dt,
+  dl.defs .row + .row dd {
+    border-top: 1px solid var(--rule-soft);
+    padding-top: 18px;
+  }
+
+  /* Ordered steps */
+  ol.steps {
+    margin: 0;
+    padding-left: 22px;
+    color: var(--ink-2);
+  }
+  ol.steps li {
+    margin-bottom: 12px;
+    line-height: 1.7;
+    padding-left: 6px;
+  }
+  ol.steps li::marker { color: var(--accent); font-weight: 600; }
+  ol.steps strong { color: var(--ink); font-weight: 600; }
+
+  .note {
+    margin-top: 24px;
+    padding: 16px 20px;
+    background: var(--paper-2);
+    border-left: 2px solid var(--rule);
+    font-size: 14.5px;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.65;
+  }
+
+  /* FAQ */
+  .faq-item { margin-bottom: 24px; }
+  .faq-item:last-child { margin-bottom: 0; }
+  .faq-item h3 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+  .faq-item p {
+    margin: 0;
+    color: var(--ink-2);
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+
+  /* Apply card */
+  .apply-card {
+    text-align: center;
+    padding: 56px 64px;
+  }
+  .apply-card .rule { margin-left: auto; margin-right: auto; }
+  .apply-card h2 { margin-bottom: 16px; }
+  .apply-card p {
+    max-width: 480px;
+    margin: 0 auto 28px;
+    color: var(--ink-2);
+    font-size: 15.5px;
+    line-height: 1.65;
+  }
+
+  /* Footer info */
+  .footer-info h3 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 17px;
+    margin: 0 0 10px;
+  }
+  .footer-info p {
+    font-size: 14.5px;
+    color: var(--muted);
+    line-height: 1.65;
+    margin: 0 0 28px;
+  }
+  .footer-info p:last-child { margin-bottom: 0; }
+
+  /* Bottom strip */
+  footer.site {
+    border-top: 1px solid var(--rule);
+    margin-top: 18px;
+    padding: 24px 0;
+  }
+  footer.site .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13.5px;
+    color: var(--muted);
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  footer.site .left { display: flex; gap: 24px; flex-wrap: wrap; }
+  footer.site a { color: var(--muted); text-decoration: none; }
+  footer.site a:hover { color: var(--accent); }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    .card, .card.hero, .card.tight, .apply-card { padding: 36px 26px; }
+    h1.hero { font-size: 38px; }
+    h2 { font-size: 26px; }
+    .two-col { grid-template-columns: 1fr; gap: 36px; }
+    dl.defs { grid-template-columns: 1fr; row-gap: 6px; }
+    dl.defs .row + .row dt,
+    dl.defs .row + .row dd { border-top: none; padding-top: 0; }
+    dl.defs .row { padding: 14px 0; border-top: 1px solid var(--rule-soft); display: block; }
+    dl.defs .row:first-child { border-top: none; }
+    dl.defs dt { margin-bottom: 4px; }
+    nav.top { gap: 14px; font-size: 13px; flex-wrap: wrap; justify-content: flex-end; }
+    ol.chain li { grid-template-columns: 40px 1fr; }
+    footer.site .inner { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="page-wide inner">
+    <a href="{{ '/' | relative_url }}" class="brand">WorkingDog.fi</a>
+    <nav class="top">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/judging/' | relative_url }}">IRO SAR Test</a>
+      <a href="{{ '/webinars-eng.html' | relative_url }}">Webinars / ENG</a>
+      <a href="{{ '/webinars-rus.html' | relative_url }}">Вебинары / РУС</a>
+    </nav>
+  </div>
+</header>
+
+{{ content }}
+
+<footer class="site">
+  <div class="page-wide inner">
+    <div class="left">
+      <span>E-mail: <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></span>
+      <span>Phone: <a href="tel:{{ site.author.phone | replace: ' ', '' }}">{{ site.author.phone }}</a></span>
+      <span>Location: {{ site.author.location }}</span>
+    </div>
+    <div>Copyright &copy; {{ site.time | date: "%Y" }} {{ site.author.name }}</div>
+  </div>
+</footer>
+
+</body>
+</html>
