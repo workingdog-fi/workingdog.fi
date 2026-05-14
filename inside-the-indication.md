@@ -41,10 +41,10 @@ Most "indication problems" — drift, scanning, premature break, weak alert — 
 
 Indication is a chain of nine trained skills. When it breaks, one of those skills was never built or never generalised. Diagnose the missing link before you reach for a correction.
 
-**You can't change complex behaviour without structuring it.**
+You can't change complex behaviour without structuring it.
 {:.tagline}
 
-This webinar gives you the framework to do the structural diagnosis on your own dog.
+This webinar gives you the framework to run the structural diagnosis on your own dog.
 
 </section>
 
@@ -77,11 +77,11 @@ Recall, stay, and heeling matter for SAR work and for the wrap-up out of the fin
 ## What you'll get
 {:.section-title}
 
-- The minimum learning theory that actually changes how you train — classical vs operant, reinforcer vs reward, Premack.
+- The minimum learning theory that changes how you train — classical vs operant, reinforcer vs reward, Premack.
 - Why the helper is the most underestimated lever in SAR training — and how reward geometry shapes alert distance.
 - The nine skills underneath an indication, named and mapped to the chain — what each one looks like when missing. (Recall, stay, heel are general handling — not in this diagnostic.)
-- A two-stage diagnosis: first decompose the chain to find the broken link (the work most handlers skip), *then* apply *don't know / no motivation / not healthy* to that specific link to pick the response. Walked through on live examples from registrants.
-- Before the chain: what changed in the *picture* the dog is reading. Airflow, contamination, area saturation, hide accessibility, your own line tension and body language, reinforcement history for this problem class. If the picture changed, the dog isn't broken — the question is.
+- The two-stage diagnosis: first decompose the chain to find the broken link (the work most handlers skip), *then* apply *don't know / no motivation / not healthy* to that specific link to pick the response. Walked through on live examples from registrants.
+- The pre-chain check: what changed in the *picture* the dog is reading — airflow, contamination, area saturation, hide accessibility, your own line tension and body language, reinforcement history for this problem class. If the picture changed, the dog isn't broken — the question is.
 {:.value-list}
 
 </section>
@@ -134,7 +134,7 @@ Recall, stay, and heeling matter for SAR work and for the wrap-up out of the fin
   </tr>
   <tr>
     <th>Refund</th>
-    <td>All sales final. Recording included free, so missing the live session still delivers the content.</td>
+    <td>All sales final — the recording covers a missed live session.</td>
   </tr>
 </table>
 
@@ -174,7 +174,7 @@ My dog isn't at an indication stage yet. Should I apply?
 : If you have scent foundation but the indication is breaking, yes — that's the audience. If there is no scent work yet, the open course later in 2026 is the right format. Note that on the application and you'll go on the list instead.
 
 Why apply-first instead of just selling tickets?
-: Your answer to "the single hardest indication problem you have right now" goes into the live Q&A bank. Curating the room means the questions worked through during the session map to dogs actually in the audience — useful for everyone, not just the asker.
+: Your answer to "the single hardest indication problem you have right now" goes into the live Q&A bank. Curating the room means the questions worked through during the session map to dogs in the audience — useful for everyone, not just the asker.
 {:.faq-list}
 
 </section>
@@ -202,7 +202,7 @@ Your application data — name, email, dog and training context, country — is 
 
 ### If we have to cancel
 
-If the event is rescheduled for any reason, paid attendees keep their seat at the new date. Recording delivery commitment carries to the new date. If the event is cancelled outright (no reschedule possible), the recording of an equivalent session — live or pre-recorded — is delivered instead.
+If the event is rescheduled for any reason, paid attendees keep their seat at the new date. Recording delivery commitment carries to the new date. If the event is cancelled outright (no reschedule possible), you receive the recording of an equivalent session — live or pre-recorded — instead.
 
 </section>
 
