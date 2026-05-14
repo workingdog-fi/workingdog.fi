@@ -1,19 +1,47 @@
 ---
-layout: default
+layout: webinars
 title: "SAR Dog Training Webinars"
 description: "Professional webinars on Search and Rescue dog training techniques"
 lang: en
 ---
 
-<div class="container">
-    {% assign webinar_data = site.data.webinars-eng %}
-    {% include webinars.html 
-       webinar_data=webinar_data 
-       available_webinars_text="Available Webinars"
-       duration_text="Duration"
-       level_text="Level"
-       register_title="Register for Webinars"
-    %}
-</div>
+{% assign data = site.data['webinars-eng'] %}
 
-{% include webinar-styles.html %}
+<main class="page">
+
+  <section class="card hero">
+    <h1>{{ data.title }}</h1>
+    <p>{{ data.description }}</p>
+  </section>
+
+  <section class="card">
+    <h2>Available Webinars</h2>
+    <hr class="rule">
+
+    <div class="webinar-grid">
+      {% for webinar in data.webinars %}
+      <article class="webinar">
+        <div class="webinar-img">
+          {% if webinar.image %}
+          <img src="{{ webinar.image | relative_url }}" alt="{{ webinar.title }}">
+          {% else %}
+          <div class="photo-ph">{{ webinar.title }}<br>16:9 photo</div>
+          {% endif %}
+        </div>
+        <h3>{{ webinar.title }}</h3>
+        <p class="webinar-lead">{{ webinar.description }}</p>
+        <ul>
+          {% for topic in webinar.topics %}
+          <li>{{ topic }}</li>
+          {% endfor %}
+        </ul>
+        <div class="meta"><strong>Duration:</strong> {{ webinar.duration }} <span class="sep">|</span> <strong>Level:</strong> {{ webinar.level }}</div>
+        {% if webinar.url %}
+        <a href="{{ webinar.url | relative_url }}" class="btn"{% if webinar.url contains '://' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ webinar.cta_text | default: "Learn more" }}</a>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+</main>
