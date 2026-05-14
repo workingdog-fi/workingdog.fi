@@ -66,9 +66,6 @@ This webinar gives you the framework to run the structural diagnosis on your own
   <li class="skill-link"><span class="skill-num">9</span><span class="skill-name">Generalisation across context — rubble, forest, vehicles, night, multiple victim profiles</span></li>
 </ol>
 
-Recall, stay, and heeling matter for SAR work and for the wrap-up out of the find scene. They are not what causes an indication to fail — and they are not in this diagnostic.
-{:.skills-scopeout}
-
 </section>
 
 <!-- What you'll get -->
