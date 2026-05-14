@@ -1,19 +1,51 @@
 ---
-layout: default
+layout: webinars
 title: "Вебинары по подготовке поисковых собак"
 description: "Профессиональные вебинары по методикам подготовки поисково-спасательных собак"
 lang: ru
 ---
 
-<div class="container">
-    {% assign webinar_data = site.data.webinars-rus %}
-    {% include webinars.html 
-       webinar_data=webinar_data 
-       available_webinars_text="Доступные вебинары"
-       duration_text="Продолжительность"
-       level_text="Уровень"
-       register_title="Регистрация на вебинары"
-    %}
-</div>
+{% assign data = site.data['webinars-rus'] %}
 
-{% include webinar-styles.html %}
+<main class="page">
+
+  <section class="card hero">
+    <h1>{{ data.title }}</h1>
+    <p>{{ data.description }}</p>
+    {% if data.registration_url %}
+    {% if data.registration_prompt %}<p>{{ data.registration_prompt }}</p>{% endif %}
+    <a href="{{ data.registration_url }}" class="btn" target="_blank" rel="noopener noreferrer">{{ data.registration_text | default: "Зарегистрироваться" }}</a>
+    {% endif %}
+  </section>
+
+  <section class="card">
+    <h2>Доступные вебинары</h2>
+    <hr class="rule">
+
+    <div class="webinar-grid">
+      {% for webinar in data.webinars %}
+      <article class="webinar">
+        <div class="webinar-img">
+          {% if webinar.image %}
+          <img src="{{ webinar.image | relative_url }}" alt="{{ webinar.title }}">
+          {% else %}
+          <div class="photo-ph">{{ webinar.title }}<br>16:9</div>
+          {% endif %}
+        </div>
+        <h3>{{ webinar.title }}</h3>
+        <p class="webinar-lead">{{ webinar.description }}</p>
+        <ul>
+          {% for topic in webinar.topics %}
+          <li>{{ topic }}</li>
+          {% endfor %}
+        </ul>
+        <div class="meta"><strong>Продолжительность:</strong> {{ webinar.duration }} <span class="sep">|</span> <strong>Уровень:</strong> {{ webinar.level }}</div>
+        {% if webinar.url %}
+        <a href="{{ webinar.url | relative_url }}" class="btn"{% if webinar.url contains '://' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ webinar.cta_text | default: "Подробнее" }}</a>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+</main>

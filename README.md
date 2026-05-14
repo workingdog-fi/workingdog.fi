@@ -52,7 +52,7 @@ bundle exec jekyll serve
 
 - Edit `_config.yml` for site settings
 - Modify data files in `_data/` to update content
-- Customize styling in `assets/css/style.css`
+- Customize styling in the `<style>` block of each layout in `_layouts/`
 - Update personal information in the config file
 
 ## Deployment
