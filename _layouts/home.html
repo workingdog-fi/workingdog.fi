@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title | default: site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+
+{% comment %} Open Graph + Twitter Card — auto-generated from page frontmatter when present {% endcomment %}
+<meta property="og:title" content="{{ page.og_title | default: page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.og_description | default: page.description | default: site.description }}">
+<meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+{% if page.og_image %}<meta property="og:image" content="{{ page.og_image | absolute_url }}">{% endif %}
+<meta property="og:locale" content="{{ page.lang | default: 'en' }}_{{ page.region | default: 'US' }}">
+<meta property="og:site_name" content="WorkingDog.fi">
+<meta name="twitter:card" content="{% if page.og_image %}summary_large_image{% else %}summary{% endif %}">
+<meta name="twitter:title" content="{{ page.og_title | default: page.title | default: site.title }}">
+<meta name="twitter:description" content="{{ page.og_description | default: page.description | default: site.description }}">
+{% if page.og_image %}<meta name="twitter:image" content="{{ page.og_image | absolute_url }}">{% endif %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #efeae1;
+    --paper: #fbf8f2;
+    --paper-2: #f6f1e7;
+    --ink: #1c1a17;
+    --ink-2: #2c2926;
+    --muted: #6b655c;
+    --rule: #d9d2c4;
+    --rule-soft: #e6dfd0;
+    --accent: #c2562a;
+    --accent-soft: #d97a4a;
+    --serif: "Source Serif 4", "Iowan Old Style", "Georgia", serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
+  a:hover { text-decoration-color: var(--accent); color: var(--accent); }
+
+  .page { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  header.site {
+    border-bottom: 1px solid var(--rule);
+    background: var(--bg);
+  }
+  header.site .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 0;
+  }
+  .brand {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+  }
+  nav.top { display: flex; gap: 28px; font-size: 15px; color: var(--ink-2); }
+  nav.top a { text-decoration: none; }
+  nav.top a:hover { color: var(--accent); }
+
+  /* Card */
+  .card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    margin: 18px 0;
+    padding: 44px 56px;
+  }
+
+  /* Hero */
+  .hero {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .hero-photo {
+    width: 240px;
+    height: 240px;
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo-ph {
+    width: 100%;
+    height: 100%;
+    background:
+      repeating-linear-gradient(45deg, transparent 0 8px, rgba(28,26,23,0.04) 8px 9px),
+      var(--paper-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+    padding: 8px;
+  }
+  h1.name {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+  }
+  .role {
+    color: var(--accent);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 14px;
+  }
+  .hero-bio {
+    color: var(--ink-2);
+    font-size: 16px;
+    line-height: 1.65;
+    max-width: 540px;
+    margin: 0;
+  }
+
+  /* Section heading */
+  h2 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+  }
+  .rule {
+    width: 44px;
+    height: 2px;
+    background: var(--accent);
+    margin: 0 0 24px;
+    border: none;
+  }
+
+  /* Two column grid for summary/certs */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .grid-2 .card { margin: 0; }
+
+  .prose p { margin: 0 0 14px; color: var(--ink-2); line-height: 1.7; }
+
+  /* Stats */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 24px;
+  }
+  .stat {
+    background: var(--paper-2);
+    border: 1px solid var(--rule-soft);
+    padding: 18px 16px;
+    text-align: left;
+  }
+  .stat .num {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .stat .lbl {
+    margin-top: 8px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+  }
+
+  /* Cert chips */
+  .certs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .cert {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--paper-2);
+    border: 1px solid var(--rule-soft);
+    padding: 12px 14px;
+    font-size: 14px;
+    color: var(--ink-2);
+    font-weight: 500;
+    min-height: 56px;
+  }
+  .cert.wide { grid-column: 1 / -1; }
+  .cert-logo {
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    overflow: hidden;
+  }
+  .cert-logo img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
+
+  /* Dogs */
+  .dogs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  .dog {
+    background: var(--paper-2);
+    border: 1px solid var(--rule-soft);
+    padding: 20px 18px;
+    text-align: center;
+  }
+  .dog-photo {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 14px;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    overflow: hidden;
+  }
+  .dog-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .dog-photo .photo-ph { font-size: 10px; }
+  .dog h3 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 0 10px;
+    text-align: center;
+  }
+  .dog dl {
+    margin: 0;
+    text-align: left;
+    font-size: 13.5px;
+    color: var(--ink-2);
+    line-height: 1.55;
+  }
+  .dog dl > div { margin-bottom: 6px; }
+  .dog dt {
+    display: inline;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .dog dd {
+    display: inline;
+    margin: 0 0 0 4px;
+  }
+
+  /* Deployments timeline */
+  .deploy {
+    border-left: 3px solid var(--accent);
+    background: var(--paper-2);
+    padding: 18px 22px;
+    margin-bottom: 14px;
+  }
+  .deploy:last-child { margin-bottom: 0; }
+  .deploy h3 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: var(--ink);
+  }
+  .deploy p {
+    margin: 0;
+    color: var(--ink-2);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .deploy .website {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #f7e9dc;
+    border: 1px solid #ecd6c0;
+    font-size: 14px;
+    color: var(--ink-2);
+  }
+  .deploy .website a { color: var(--accent); text-decoration-color: var(--accent-soft); font-weight: 600; }
+
+  /* Videos */
+  .videos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+  .video {
+    background: #14130f;
+    color: #ece6d8;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  .video-thumb {
+    aspect-ratio: 16/10;
+    background:
+      linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.6) 100%),
+      repeating-linear-gradient(135deg, #2a2620 0 12px, #221f1a 12px 24px);
+    position: relative;
+  }
+  .video-thumb img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .video-thumb::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.55) 100%);
+  }
+  .video-thumb::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    background: rgba(255,255,255,0.92);
+    clip-path: polygon(30% 20%, 30% 80%, 80% 50%);
+  }
+  .video-body { padding: 16px 18px 20px; }
+  .video h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    color: #f3ecdc;
+    line-height: 1.35;
+  }
+  .video p {
+    font-size: 13px;
+    color: #b6ad9a;
+    margin: 0;
+    line-height: 1.5;
+  }
+  .video:hover h3 { color: var(--accent-soft); }
+
+  /* Footer */
+  footer.site {
+    border-top: 1px solid var(--rule);
+    margin-top: 18px;
+    padding: 24px 0;
+  }
+  footer.site .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13.5px;
+    color: var(--muted);
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  footer.site .left { display: flex; gap: 24px; flex-wrap: wrap; }
+  footer.site a { color: var(--muted); text-decoration: none; }
+  footer.site a:hover { color: var(--accent); }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    .dogs { grid-template-columns: repeat(2, 1fr); }
+    .videos { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    .card { padding: 28px 22px; }
+    .hero { grid-template-columns: 1fr; gap: 22px; text-align: center; }
+    .hero-photo { margin: 0 auto; }
+    h1.name { font-size: 48px; }
+    .hero-bio { margin: 0 auto; }
+    .stats { grid-template-columns: 1fr 1fr 1fr; }
+    .certs { grid-template-columns: 1fr; }
+    .cert.wide { grid-column: auto; }
+    .dogs { grid-template-columns: 1fr; }
+    .videos { grid-template-columns: 1fr; }
+    nav.top { gap: 12px; font-size: 13px; flex-wrap: wrap; justify-content: flex-end; }
+    footer.site .inner { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="page inner">
+    <a href="{{ '/' | relative_url }}" class="brand">WorkingDog.fi</a>
+    <nav class="top">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/judging/' | relative_url }}">IRO SAR Test</a>
+      <a href="{{ '/webinars-eng.html' | relative_url }}">Webinars / ENG</a>
+      <a href="{{ '/webinars-rus.html' | relative_url }}">Вебинары / РУС</a>
+    </nav>
+  </div>
+</header>
+
+{{ content }}
+
+<footer class="site">
+  <div class="page inner">
+    <div class="left">
+      <span>E-mail: <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></span>
+      <span>Phone: <a href="tel:{{ site.author.phone | replace: ' ', '' }}">{{ site.author.phone }}</a></span>
+      <span>Location: {{ site.author.location }}</span>
+    </div>
+    <div>Copyright &copy; {{ site.time | date: "%Y" }} {{ site.author.name }}</div>
+  </div>
+</footer>
+
+</body>
+</html>
