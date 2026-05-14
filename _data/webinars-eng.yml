@@ -1,5 +1,5 @@
 title: "SAR Dog Training Webinars"
-description: "Enhance your SAR dog training skills with our specialized webinars designed for handlers at all levels. Each webinar below has its own application or registration flow — pick the one you want."
+description: "Webinars on SAR dog training, for handlers at every level. Each one below has its own application or registration — pick the one you want."
 
 webinars:
   - title: "Inside the Indication — Saturday 30 May 2026"
@@ -18,7 +18,7 @@ webinars:
 
   - title: "False Indications: Understanding and Prevention"
     image: "/assets/images/webinars/false-indications.jpg"
-    description: "Learn to identify, understand, and prevent false indications in SAR dogs. This comprehensive webinar covers:"
+    description: "Why SAR dogs throw false indications, and how to cut them down. This webinar covers:"
     topics:
       - "Common causes of false indications in search scenarios"
       - "Environmental factors that trigger false alerts"
@@ -32,7 +32,7 @@ webinars:
 
   - title: "Reward Schedules: Optimizing Training Effectiveness"
     image: "/assets/images/webinars/reward-schedules.jpg"
-    description: "Master the science of reward schedules to maximize your dog's learning and performance. Topics include:"
+    description: "How reward schedules shape what your dog learns and how hard it works. Topics include:"
     topics:
       - "Understanding fixed vs. variable reinforcement schedules"
       - "Timing and frequency of rewards for optimal learning"
@@ -46,7 +46,7 @@ webinars:
 
   - title: "Mastering Barking Indication"
     image: "/assets/images/webinars/barking-indication.jpg"
-    description: "Develop reliable and sustained barking indication in your SAR dog. This webinar explores:"
+    description: "Building a barking indication that holds up under real search conditions. This webinar covers:"
     topics:
       - "Building foundation behaviors for bark indication"
       - "Techniques for sustained, confident barking"
