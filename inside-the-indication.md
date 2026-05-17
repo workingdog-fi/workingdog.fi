@@ -43,7 +43,7 @@ og_type: "event"
     <ol class="chain">
       <li><span>Social engagement with the helper</span></li>
       <li><span>Luring &amp; reverse luring</span></li>
-      <li><span>The "back" command — distance from the handler</span></li>
+      <li><span>"Keep the distance" — defined distance from the source</span></li>
       <li><span>Ignoring external stimuli</span></li>
       <li><span>Sit &amp; down under arousal</span></li>
       <li><span>Bark on cue, sustained</span></li>
