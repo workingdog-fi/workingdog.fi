@@ -260,6 +260,7 @@
       <span>E-mail: <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></span>
       <span>Phone: <a href="tel:{{ site.author.phone | replace: ' ', '' }}">{{ site.author.phone }}</a></span>
       <span>Location: {{ site.author.location }}</span>
+      <span>{{ site.business.name }} · Y-tunnus {{ site.business.id }} · <a href="{{ '/legal/' | relative_url }}">Legal</a></span>
     </div>
     <div>Copyright &copy; {{ site.time | date: "%Y" }} {{ site.author.name }}</div>
   </div>

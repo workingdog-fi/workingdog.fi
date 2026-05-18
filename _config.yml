@@ -20,6 +20,14 @@ author:
   location: "Tampere, Finland"
   portrait: "/assets/images/portrait.png"
 
+# Business / legal (Finnish sole trader)
+business:
+  name: "Workingdog Nordic"
+  id: "3624536-8"
+  form: "Yksityinen elinkeinonharjoittaja (sole trader)"
+  domicile: "Tampere, Finland"
+  toimiala: "Dog training, behaviour consulting, coaching, online courses and webinars, digital learning materials."
+
 # SAR Statistics
 stats:
   experience_years: 15

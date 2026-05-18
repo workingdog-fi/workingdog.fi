@@ -1,4 +1,3 @@
-
 # Vadim Likholetov - SAR Officer & Dog Handler Portfolio
 
 A Jekyll-powered website showcasing the professional experience and qualifications of SAR Officer and Dog Handler Vadim Likholetov.
@@ -12,6 +11,7 @@ To deploy this site to `vadika.github.io`, you need to:
 3. The site will automatically deploy to https://vadika.github.io
 
 ### Current Status
+
 - Repository is currently named `workingdog.fi`
 - Needs to be renamed to `vadika.github.io` for proper GitHub Pages deployment
 - Jekyll configuration has been updated to use the correct URL
@@ -27,26 +27,30 @@ To deploy this site to `vadika.github.io`, you need to:
 ## Setup
 
 1. Install Jekyll:
+
 ```bash
 gem install jekyll bundler
 ```
 
-2. Clone and navigate to the repository:
+1. Clone and navigate to the repository:
+
 ```bash
 cd your-site-directory
 ```
 
-3. Install dependencies:
+1. Install dependencies:
+
 ```bash
 bundle install
 ```
 
-4. Serve the site locally:
+1. Serve the site locally:
+
 ```bash
 bundle exec jekyll serve
 ```
 
-5. Visit `http://localhost:4000` to view the site
+1. Visit `http://localhost:4000` to view the site
 
 ## Customization
 
@@ -58,4 +62,3 @@ bundle exec jekyll serve
 ## Deployment
 
 Deploy to GitHub Pages by pushing to a repository named `username.github.io` or enable GitHub Pages in repository settings.
-
