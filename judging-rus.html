@@ -1,0 +1,104 @@
+---
+layout: judging_rus
+title: "IRO SAR тест — судейство и регламент"
+description: "Справочник по тесту IRO SAR: упражнения, логика оценки и на что смотрит судья."
+permalink: /judging-rus/
+lang: ru
+region: RU
+---
+
+{% assign judging_pages = site.judging_rus %}
+{% if judging_pages %}
+{% assign judging_pages = judging_pages | sort: "judging_order" %}
+{% else %}
+{% assign judging_pages = "" | split: "" %}
+{% endif %}
+{% assign judge_view = judging_pages | where: "judging_group", "judge" %}
+{% assign obedience = judging_pages | where: "judging_group", "obedience" %}
+{% assign nosework = judging_pages | where: "judging_group", "nosework" %}
+
+<main class="page">
+
+  <section class="card judging-hero">
+    <p class="judging-label">Справочник</p>
+    <h1>IRO SAR тест</h1>
+    <p class="judging-intro">Разбор теста IRO SAR упражнение за упражнением — для проводников и участников: как проходит, как оценивается, на что смотрит судья.</p>
+  </section>
+
+  {% if judging_pages.size > 0 %}
+
+  <section class="card">
+    <h2>Взгляд судьи</h2>
+    <hr class="rule">
+    <div class="judging-list">
+      {% for item in judge_view %}
+      <a href="{{ item.url | relative_url }}" class="judging-list-item">
+        <span class="judging-item-main">
+          <span class="judging-ref">{{ item.judging_ref }}</span>
+          <span class="judging-list-title">{{ item.title }}</span>
+        </span>
+        {% if item.judging_subtopics and item.judging_subtopics.size > 0 %}
+        <span class="judging-item-preview">
+          {% for subtopic in item.judging_subtopics %}
+          <span class="judging-subtopic">{{ subtopic }}</span>
+          {% endfor %}
+        </span>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Послушание и ловкость</h2>
+    <hr class="rule">
+    <div class="judging-list">
+      {% for item in obedience %}
+      <a href="{{ item.url | relative_url }}" class="judging-list-item">
+        <span class="judging-item-main">
+          <span class="judging-ref">{{ item.judging_ref }}</span>
+          <span class="judging-list-title">{{ item.title }}</span>
+        </span>
+        {% if item.judging_subtopics and item.judging_subtopics.size > 0 %}
+        <span class="judging-item-preview">
+          {% for subtopic in item.judging_subtopics %}
+          <span class="judging-subtopic">{{ subtopic }}</span>
+          {% endfor %}
+        </span>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Поиск и обозначение</h2>
+    <hr class="rule">
+    <div class="judging-list">
+      {% for item in nosework %}
+      <a href="{{ item.url | relative_url }}" class="judging-list-item">
+        <span class="judging-item-main">
+          <span class="judging-ref">{{ item.judging_ref }}</span>
+          <span class="judging-list-title">{{ item.title }}</span>
+        </span>
+        {% if item.judging_subtopics and item.judging_subtopics.size > 0 %}
+        <span class="judging-item-preview">
+          {% for subtopic in item.judging_subtopics %}
+          <span class="judging-subtopic">{{ subtopic }}</span>
+          {% endfor %}
+        </span>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% else %}
+  <section class="card">
+    <h2>Контент пока не импортирован</h2>
+    <hr class="rule">
+    <p>Запустите шаг импорта или дождитесь сборки.</p>
+  </section>
+  {% endif %}
+
+</main>

@@ -45,6 +45,9 @@ collections:
   judging:
     output: true
     permalink: /judging/:name/
+  judging_rus:
+    output: true
+    permalink: /judging-rus/:name/
 
 # Exclude from processing
 exclude:

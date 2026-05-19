@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: 'en' }}">
+<html lang="{{ page.lang | default: 'ru' }}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ page.title | default: site.title }} — IRO SAR Test | WorkingDog.fi</title>
+<title>{{ page.title | default: site.title }} — IRO SAR тест | WorkingDog.fi</title>
 <meta name="description" content="{{ page.description | default: site.description }}">
 
 {% comment %} Open Graph + Twitter Card {% endcomment %}
@@ -11,7 +11,7 @@
 <meta property="og:description" content="{{ page.og_description | default: page.description | default: site.description }}">
 <meta property="og:type" content="article">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
-<meta property="og:locale" content="{{ page.lang | default: 'en' }}_{{ page.region | default: 'US' }}">
+<meta property="og:locale" content="{{ page.lang | default: 'ru' }}_{{ page.region | default: 'RU' }}">
 <meta property="og:site_name" content="WorkingDog.fi">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{{ page.og_title | default: page.title | default: site.title }}">
@@ -67,7 +67,7 @@
     letter-spacing: -0.01em;
     text-decoration: none;
   }
-  nav.top { display: flex; gap: 28px; font-size: 15px; color: var(--ink-2); }
+  nav.top { display: flex; gap: 22px; font-size: 15px; color: var(--ink-2); }
   nav.top a { text-decoration: none; }
   nav.top a:hover { color: var(--accent); }
   nav.top a.active { color: var(--accent); font-weight: 600; }
@@ -181,15 +181,6 @@
     font-weight: 600;
   }
 
-  .judging-source {
-    margin-top: 32px;
-    padding-top: 16px;
-    border-top: 1px solid var(--rule);
-    color: var(--muted);
-    font-size: 14px;
-  }
-  .judging-source a { color: var(--accent); }
-
   /* Footer */
   footer.site {
     border-top: 1px solid var(--rule);
@@ -227,8 +218,8 @@
     <a href="{{ '/' | relative_url }}" class="brand">WorkingDog.fi</a>
     <nav class="top">
       <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/judging/' | relative_url }}"{% if page.url contains '/judging/' %} class="active"{% endif %}>IRO SAR Test / ENG</a>
-      <a href="{{ '/judging-rus/' | relative_url }}">IRO SAR тест / РУС</a>
+      <a href="{{ '/judging/' | relative_url }}">IRO SAR Test / ENG</a>
+      <a href="{{ '/judging-rus/' | relative_url }}"{% if page.url contains '/judging-rus' %} class="active"{% endif %}>IRO SAR тест / РУС</a>
       <a href="{{ '/webinars-eng.html' | relative_url }}">Webinars / ENG</a>
       <a href="{{ '/webinars-rus.html' | relative_url }}">Вебинары / РУС</a>
     </nav>
@@ -238,7 +229,7 @@
 <main class="page-narrow">
   <article class="card judging-entry">
     <div class="judging-breadcrumb">
-      <a href="{{ '/judging/' | relative_url }}">IRO SAR Test</a>
+      <a href="{{ '/judging-rus/' | relative_url }}">IRO SAR тест</a>
       <span>/</span>
       <span>{{ page.title }}</span>
     </div>
@@ -253,13 +244,6 @@
     <div class="judging-content">
       {{ content }}
     </div>
-
-    {% if page.source_url %}
-    <p class="judging-source">
-      Source:
-      <a href="{{ page.source_url }}">{{ page.source_path }}</a>
-    </p>
-    {% endif %}
   </article>
 </main>
 
@@ -267,8 +251,8 @@
   <div class="page inner">
     <div class="left">
       <span>E-mail: <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></span>
-      <span>Phone: <a href="tel:{{ site.author.phone | replace: ' ', '' }}">{{ site.author.phone }}</a></span>
-      <span>Location: {{ site.author.location }}</span>
+      <span>Телефон: <a href="tel:{{ site.author.phone | replace: ' ', '' }}">{{ site.author.phone }}</a></span>
+      <span>Местоположение: {{ site.author.location }}</span>
       <span>{{ site.business.name }} · Y-tunnus {{ site.business.id }} · <a href="{{ '/legal/' | relative_url }}">Legal</a></span>
     </div>
     <div>Copyright &copy; {{ site.time | date: "%Y" }} {{ site.author.name }}</div>
