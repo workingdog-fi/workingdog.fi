@@ -45,7 +45,7 @@ og_type: "event"
       <li><span>Luring &amp; reverse luring</span></li>
       <li><span>"Keep the distance" — defined distance from the source</span></li>
       <li><span>Ignoring external stimuli</span></li>
-      <li><span>Sit &amp; down under arousal</span></li>
+      <li><span>Keep position under arousal</span></li>
       <li><span>Bark on cue, sustained</span></li>
       <li><span>Continuous action at the find</span></li>
       <li><span>Markers</span></li>
