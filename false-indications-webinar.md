@@ -11,7 +11,7 @@ og_type: "event"
 # og_image: "/assets/images/false-indications-og-card.jpg"  # uncomment + add file once the 1200x630 anchor slide is exported
 ---
 
-<div class="container">
+<div class="page">
 
 <!-- Hero -->
 <section class="section">
