@@ -448,4 +448,52 @@ If the event is rescheduled for any reason, paid attendees keep their seat at th
     color: var(--text);
     line-height: 1.65;
 }
+
+/* hero */
+.webinar-header {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.webinar-header h1 {
+    font-family: 'Fraunces', serif;
+    color: var(--bg-deep);
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    margin-bottom: 12px;
+}
+
+.webinar-header .lead {
+    font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+    color: var(--text);
+    margin: 0 auto 24px;
+    max-width: 60ch;
+}
+
+.registration-prompt {
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.registration-button {
+    margin: 8px 0 4px;
+}
+
+.button {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 15px 34px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: opacity 0.15s ease;
+}
+
+.button:hover {
+    opacity: 0.88;
+}
 </style>
