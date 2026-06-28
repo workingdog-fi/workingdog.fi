@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: indication
 title: "Reading False Indications — Webinar | WorkingDog.fi"
 description: "A 90-minute paid webinar with Vadim Likholetov: classify the false indication before you respond. Three types — no target odor, wrong odor, true indication scored false — and the fix that follows from each. Saturday 25 July 2026, 11:00 EEST."
 lang: en
